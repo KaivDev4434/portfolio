@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
 import Link from 'next/link';
 
 const footerVariants = {
@@ -46,7 +46,7 @@ const Footer = () => {
           onClick={scrollToTop}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 rounded-full bg-accent-coral text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+          className="w-14 h-14 rounded-full bg-accent-clay text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
         >
           <FiArrowUp className="w-6 h-6" />
         </motion.button>
@@ -69,7 +69,7 @@ const Footer = () => {
         >
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="gradient-text">Portfolio</span>
+              <span className="text-accent-clay">Portfolio</span>
             </h3>
             <p className="text-gray-300 leading-relaxed">
               A showcase of my work, skills, and experience in data science and machine learning.
@@ -77,32 +77,24 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/KaivDev4434"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-teal transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-sage transition-all duration-300 transform hover:scale-110"
               >
                 <FiGithub className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/kaivalya-dixit-2a25851b9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-teal transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-sage transition-all duration-300 transform hover:scale-110"
               >
                 <FiLinkedin className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-teal transition-all duration-300 transform hover:scale-110"
-              >
-                <FiTwitter className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="mailto:your.email@example.com"
-                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-teal transition-all duration-300 transform hover:scale-110"
+                href="mailto:kaivalyawork@gmail.com"
+                className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-sage transition-all duration-300 transform hover:scale-110"
               >
                 <FiMail className="w-5 h-5 text-white" />
               </a>
@@ -111,16 +103,16 @@ const Footer = () => {
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="gradient-text">Quick Links</span>
+              <span className="text-accent-clay">Quick Links</span>
             </h3>
             <ul className="space-y-3">
-              {["Home", "About", "Experience", "Projects", "Skills", "Education"].map((link) => (
+              {["Home", "About", "Experience", "Projects", "Skills", "Education", "Blog", "Contact"].map((link) => (
                 <li key={link}>
                   <Link
                     href={`#${link.toLowerCase()}`}
-                    className="text-gray-300 hover:text-accent-coral flex items-center gap-2 hover-underline w-fit transition-colors duration-300"
+                    className="text-gray-300 hover:text-accent-clay flex items-center gap-2 hover-underline w-fit transition-colors duration-300"
                   >
-                    <span className="w-2 h-2 bg-accent-coral rounded-full"></span>
+                    <span className="w-2 h-2 bg-accent-clay rounded-full"></span>
                     {link}
                   </Link>
                 </li>
@@ -130,13 +122,13 @@ const Footer = () => {
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="gradient-text">Services</span>
+              <span className="text-accent-clay">Services</span>
             </h3>
             <ul className="space-y-3">
-              {["Data Analysis", "Machine Learning", "Deep Learning", "Data Visualization", "Statistical Modeling", "NLP Solutions"].map((service) => (
+              {["Data Analysis", "Machine Learning", "Deep Learning", "Data Visualization", "Statistical Modeling", "Web Development", "System Administration", "Data Engineering"].map((service) => (
                 <li key={service}>
                   <span className="text-gray-300 flex items-center gap-2 group">
-                    <span className="w-2 h-2 bg-accent-teal rounded-full group-hover:bg-accent-coral transition-colors duration-300"></span>
+                    <span className="w-2 h-2 bg-accent-sage rounded-full group-hover:bg-accent-clay transition-colors duration-300"></span>
                     {service}
                   </span>
                 </li>
@@ -146,20 +138,20 @@ const Footer = () => {
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="gradient-text">Contact Info</span>
+              <span className="text-accent-clay">Contact Info</span>
             </h3>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <FiMail className="text-accent-coral w-5 h-5 flex-shrink-0" />
-                <span>your.email@example.com</span>
+                <FiMail className="text-accent-clay w-5 h-5 flex-shrink-0" />
+                <span>kaivalyawork@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-accent-coral text-xl flex-shrink-0">📱</span>
-                <span>+1 (123) 456-7890</span>
+                <span className="text-accent-clay text-xl flex-shrink-0">📱</span>
+                <span>+1 862-215-1490</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-accent-coral text-xl flex-shrink-0">📍</span>
-                <span>San Francisco, CA</span>
+                <span className="text-accent-clay text-xl flex-shrink-0">📍</span>
+                <span>Newark, NJ</span>
               </li>
             </ul>
           </motion.div>
@@ -169,7 +161,7 @@ const Footer = () => {
           variants={itemVariants}
           className="mt-16 pt-8 border-t border-gray-700/50 text-center text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p>© {currentYear} Your Name. All rights reserved.</p>
+          <p>© {currentYear} Kaivalya Dixit. All rights reserved.</p>
           <p>Made with ❤️ using Next.js & Tailwind CSS</p>
         </motion.div>
       </div>

@@ -47,6 +47,16 @@ section {
   background: var(--accent-sage);
 }
 
+/* Hide scrollbar for horizontal scrolling sections */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-300 gap-2;

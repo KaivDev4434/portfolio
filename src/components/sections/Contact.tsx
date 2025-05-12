@@ -282,10 +282,10 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full py-4 px-8 rounded-lg font-medium inline-flex items-center justify-center gap-2 transition-all duration-300 ${
+                className={`w-full py-4 px-8 rounded-lg font-medium inline-flex items-center justify-center gap-2 transition-all duration-300 mt-8 ${
                   isSubmitting 
                     ? 'bg-gray-400 text-white cursor-not-allowed' 
-                    : 'bg-accent-coral text-white hover:bg-accent-coral/90'
+                    : 'bg-accent-clay text-white hover:bg-accent-clay/90'
                 }`}
               >
                 {isSubmitting ? (

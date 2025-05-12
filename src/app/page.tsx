@@ -6,8 +6,12 @@ import Projects from '@/components/sections/Projects';
 import Skills from '@/components/sections/Skills';
 import Education from '@/components/sections/Education';
 import Contact from '@/components/sections/Contact';
+import Blog from '@/components/sections/Blog';
+import { getAllBlogPosts } from '@/lib/blog';
 
-export default function Home() {
+export default async function Home() {
+  const blogPosts = await getAllBlogPosts();
+  
   return (
     <div className="min-h-screen">
       <Hero />
@@ -16,6 +20,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Education />
+      <Blog blogPosts={blogPosts} />
       <Contact />
     </div>
   );

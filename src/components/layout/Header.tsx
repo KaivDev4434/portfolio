@@ -35,7 +35,7 @@ const Header = () => {
       }
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'contact'];
+      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'blog', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -57,10 +57,11 @@ const Header = () => {
   const navItems = [
     { name: 'Home', path: '#home' },
     { name: 'About', path: '#about' },
-    { name: 'Skills', path: '#skills' },
+    { name: 'Experience', path: '#experience' },
     { name: 'Projects', path: '#projects' },
-    { name: 'Services', path: '#services' },
+    { name: 'Skills', path: '#skills' },
     { name: 'Education', path: '#education' },
+    { name: 'Blog', path: '#blog' },
     { name: 'Contact', path: '#contact' },
   ];
 
@@ -88,11 +89,11 @@ const Header = () => {
             {/* Logo */}
             <Link 
               href="/" 
-              className="text-2xl font-bold text-white hover:text-accent-coral transition-colors relative group z-10"
+              className="text-2xl font-bold text-white hover:text-accent-clay transition-colors relative group z-10"
             >
               <span className="relative z-10">Portfolio</span>
               <motion.span 
-                className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-coral z-0"
+                className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-clay z-0"
                 whileHover={{ width: '100%' }}
                 transition={{ duration: 0.3 }}
               ></motion.span>
@@ -123,15 +124,15 @@ const Header = () => {
                       href={item.path}
                       className={`relative px-2 py-1 text-base font-medium transition-all duration-300 ${
                         activeSection === item.path.replace('#', '')
-                          ? 'text-accent-coral'
-                          : 'text-white hover:text-accent-teal'
+                          ? 'text-accent-clay'
+                          : 'text-white hover:text-accent-sage'
                       }`}
                     >
                       {item.name}
                       {activeSection === item.path.replace('#', '') && (
                         <motion.span
                           layoutId="activeSection"
-                          className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-coral"
+                          className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-clay"
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />
                       )}
@@ -149,7 +150,7 @@ const Header = () => {
                 animate="visible"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-accent-coral text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
+                className="bg-accent-clay text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
               >
                 Resume
                 <FiDownload className="w-4 h-4" />
@@ -177,7 +178,7 @@ const Header = () => {
                 })}
               </div>
               <button 
-                className="lg:hidden text-white hover:text-accent-coral transition-colors focus:outline-none z-50"
+                className="lg:hidden text-white hover:text-accent-clay transition-colors focus:outline-none z-50"
                 onClick={() => setIsMenuOpen(true)}
                 aria-label="Open menu"
               >
@@ -212,7 +213,7 @@ const Header = () => {
                   <span className="text-xl font-bold text-white">Menu</span>
                   <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-white hover:text-accent-coral transition-colors"
+                    className="text-white hover:text-accent-clay transition-colors"
                     aria-label="Close menu"
                   >
                     <FiX className="w-6 h-6" />
@@ -228,8 +229,8 @@ const Header = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className={`block text-lg font-medium transition-colors ${
                           activeSection === item.path.replace('#', '')
-                            ? 'text-accent-coral'
-                            : 'text-white hover:text-accent-teal'
+                            ? 'text-accent-clay'
+                            : 'text-white hover:text-accent-sage'
                         }`}
                       >
                         {item.name}
@@ -260,7 +261,7 @@ const Header = () => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white hover:text-accent-teal transition-colors"
+                          className="text-white hover:text-accent-sage transition-colors"
                         >
                           <Icon className="w-6 h-6" />
                         </motion.a>

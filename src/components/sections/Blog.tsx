@@ -1,93 +1,90 @@
 "use client"
 
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import BlogCard from '../BlogCard';
+import { BlogPost } from '@/lib/blog';
 
-const blogPosts = [
-  {
-    title: 'Understanding Deep Learning Architectures',
-    excerpt: 'A comprehensive guide to different neural network architectures and their applications in real-world problems.',
-    date: 'March 15, 2023',
-    image: '/blog/deep-learning.jpg',
-    slug: 'understanding-deep-learning-architectures',
-  },
-  {
-    title: 'Data Visualization Best Practices',
-    excerpt: 'Learn how to create effective and insightful data visualizations that communicate your findings clearly.',
-    date: 'February 28, 2023',
-    image: '/blog/data-viz.jpg',
-    slug: 'data-visualization-best-practices',
-  },
-  {
-    title: 'Machine Learning Model Deployment',
-    excerpt: 'A step-by-step guide to deploying machine learning models in production environments.',
-    date: 'February 10, 2023',
-    image: '/blog/deployment.jpg',
-    slug: 'machine-learning-model-deployment',
-  },
-];
+type BlogProps = {
+  blogPosts: BlogPost[];
+};
 
-const Blog = () => {
+const Blog = ({ blogPosts }: BlogProps) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const { current } = scrollContainerRef;
+      const scrollAmount = direction === 'left' ? -400 : 400;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="blog" className="py-20 bg-[#2A2D34] text-white">
+    <section id="blog" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12 relative"
+          className="text-3xl font-bold text-center mb-4 text-primary"
         >
-          Latest Blog Posts
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#FF6B6B]"></span>
+          Blog
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+        >
+          Insights and thoughts on data science, machine learning, and AI
+        </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-[#3A3D44] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+        <div className="relative">
+          {/* Scroll buttons */}
+          <div className="flex justify-between absolute top-1/2 left-0 right-0 -mt-6 px-4 md:px-10 pointer-events-none z-10">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => scroll('left')}
+              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-primary pointer-events-auto focus:outline-none"
+              aria-label="Scroll left"
             >
-              <div className="relative w-full h-48">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={800}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority={index === 0}
-                />
-              </div>
-              <div className="p-6">
-                <span className="text-[#5F9EA0] text-sm">{post.date}</span>
-                <h3 className="text-xl font-bold mt-2 mb-4 hover:text-[#FF6B6B] transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-[#FF6B6B] hover:text-[#5F9EA0] transition-colors font-medium"
-                >
-                  Read More →
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              <FiArrowLeft className="w-5 h-5" />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => scroll('right')}
+              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-primary pointer-events-auto focus:outline-none"
+              aria-label="Scroll right"
+            >
+              <FiArrowRight className="w-5 h-5" />
+            </motion.button>
+          </div>
 
-        <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-block bg-[#FF6B6B] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#5F9EA0] transition-colors"
+          {/* Blog cards container with horizontal scroll */}
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            View All Posts
-          </Link>
+            {/* Left padding for visual balance */}
+            <div className="pl-8 sm:pl-10 md:pl-12 lg:pl-20 shrink-0" />
+            
+            {/* Blog cards */}
+            <div className="flex gap-6">
+              {blogPosts.map((blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+              ))}
+            </div>
+            
+            {/* Right padding for visual balance */}
+            <div className="pr-8 sm:pr-10 md:pr-12 lg:pr-20 shrink-0" />
+          </div>
         </div>
       </div>
     </section>
