@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiSend, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiSend, FiMapPin } from 'react-icons/fi';
 
 // Animation variants for consistent animations
 const sectionVariants = {
@@ -34,9 +34,9 @@ const Contact = () => {
     message: ''
   });
   
+  const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<null | 'success' | 'error'>(null);
-  const [isMounted, setIsMounted] = useState(false);
 
   // Contact information
   const contactInfo = [
@@ -71,20 +71,32 @@ const Contact = () => {
     setIsMounted(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFormStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setFormStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch('https://formspree.io/f/mkgjeeyr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
       
-      // Reset status after 3 seconds
-      setTimeout(() => setFormStatus(null), 3000);
-    }, 1000);
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -125,6 +137,89 @@ const Contact = () => {
             {/* Empty placeholder spaces to maintain layout */}
             <div className="h-96"></div>
             <div className="h-96"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Form succeeded state display
+  if (formStatus === 'success') {
+    return (
+      <section id="contact" className="py-24 bg-background relative">
+        {sectionBackground}
+        <div className="container mx-auto px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <motion.div
+                variants={cardVariants}
+                custom={0}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-6 flex items-center">
+                  <span className="gradient-text">Contact Information</span>
+                </h3>
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <motion.div 
+                      key={index}
+                      variants={cardVariants}
+                      custom={index + 1}
+                      className="flex items-center gap-4 group"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-accent-teal/10 flex items-center justify-center group-hover:bg-accent-teal/20 transition-colors duration-300">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-600">{info.title}</p>
+                        {info.link ? (
+                          <a
+                            href={info.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary font-medium hover:text-accent-teal transition-colors"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <p className="text-primary font-medium">{info.value}</p>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Success message */}
+            <motion.div
+              variants={cardVariants}
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="h-full flex flex-col items-center justify-center text-center">
+                <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Message Sent!</h3>
+                <p className="text-gray-600 mb-8">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="px-6 py-3 bg-accent-clay text-white rounded-lg hover:bg-accent-clay/90 transition-all duration-300"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -257,23 +352,13 @@ const Contact = () => {
                 />
               </div>
 
-              {formStatus === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-green-100 text-green-800 rounded-lg"
-                >
-                  Your message has been sent successfully!
-                </motion.div>
-              )}
-
               {formStatus === 'error' && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-red-100 text-red-800 rounded-lg"
                 >
-                  There was an error sending your message. Please try again.
+                  There was an error sending your message. Please check the form and try again.
                 </motion.div>
               )}
 
