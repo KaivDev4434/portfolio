@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMenu, FiX, FiDownload, FiMail } from 'react-icons/fi';
-import ThemeToggle from '../ThemeToggle';
 
 const navItemVariants = {
   hidden: { opacity: 0, y: -10 },
@@ -177,7 +176,6 @@ const Header = () => {
                   );
                 })}
               </div>
-              <ThemeToggle />
               <button 
                 className="lg:hidden text-white hover:text-accent-coral transition-colors focus:outline-none z-50"
                 onClick={() => setIsMenuOpen(true)}

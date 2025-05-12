@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
-      <body className="bg-background text-primary">
+    <html lang="en" className={`${inter.variable} ${roboto.variable} light`} style={{colorScheme: "light"}}>
+      <body className="bg-background text-text">
         <ClientProviders>
           <Header />
           <main>{children}</main>

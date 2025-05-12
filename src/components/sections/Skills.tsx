@@ -55,7 +55,7 @@ const Skills = () => {
           className="text-3xl font-bold text-center mb-12 relative"
         >
           Skills & Tools
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-coral animate-draw-line"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-clay animate-draw-line"></span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -68,8 +68,8 @@ const Skills = () => {
               viewport={{ once: true }}
               className="bg-primary-light rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              <h3 className="text-xl font-bold text-accent-teal mb-6 flex items-center">
-                <span className="w-2 h-2 bg-accent-coral rounded-full mr-3"></span>
+              <h3 className="text-xl font-bold text-accent-sage mb-6 flex items-center">
+                <span className="w-2 h-2 bg-accent-clay rounded-full mr-3"></span>
                 {category.category}
               </h3>
               <div className="space-y-6">
@@ -86,17 +86,17 @@ const Skills = () => {
                       <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
                         {skill.name}
                       </span>
-                      <span className="text-accent-coral">
+                      <span className="text-accent-clay">
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="h-2 bg-primary/50 rounded-full overflow-hidden backdrop-blur-sm">
+                    <div className="h-2 bg-primary/80 rounded-full overflow-hidden backdrop-blur-sm">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         transition={{ duration: 1, delay: i * 0.1 }}
                         viewport={{ once: true }}
-                        className="h-full bg-gradient-to-r from-accent-coral to-accent-teal rounded-full shadow-lg"
+                        className="h-full bg-gradient-to-r from-accent-clay to-accent-sage rounded-full shadow-lg"
                       />
                     </div>
                   </motion.div>

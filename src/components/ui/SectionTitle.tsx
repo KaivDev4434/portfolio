@@ -18,7 +18,7 @@ const SectionTitle = ({ title, className = '' }: SectionTitleProps) => {
       className={`text-3xl font-bold text-center mb-12 relative ${className}`}
     >
       {title}
-      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#FF6B6B]"></span>
+      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-clay"></span>
     </motion.h2>
   );
 };

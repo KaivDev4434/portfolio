@@ -10,7 +10,13 @@ export default function ClientProviders({
 }) {
   return (
     <FormspreeProvider project="mkgjeeyr">
-      <ThemeProvider attribute="class">
+      <ThemeProvider 
+        attribute="class" 
+        defaultTheme="light"
+        forcedTheme="light"
+        enableSystem={false}
+        disableTransitionOnChange
+      >
         {children}
       </ThemeProvider>
     </FormspreeProvider>

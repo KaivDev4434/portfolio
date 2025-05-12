@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #2A2D34;
-  --primary-light: #3A3D44;
-  --primary-dark: #1A1D24;
-  --accent-teal: #5F9EA0;
-  --accent-coral: #FF6B6B;
-  --background: #F5F5F5;
+  --primary: #2D3748;
+  --primary-light: #3D4A5C;
+  --primary-dark: #1A202C;
+  --accent-sage: #7D9D9C;
+  --accent-clay: #C17C74;
+  --background: #F7F4ED;
+  --text: #1E293B;
 }
 
 /* Base styles */
@@ -19,7 +20,7 @@ html {
 body {
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: var(--primary);
+  color: var(--text);
   background-color: var(--background);
 }
 
@@ -43,7 +44,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-teal);
+  background: var(--accent-sage);
 }
 
 @layer components {
@@ -52,11 +53,11 @@ section {
   }
   
   .btn-primary {
-    @apply bg-accent-coral text-white hover:opacity-90;
+    @apply bg-accent-clay text-white hover:opacity-90;
   }
   
   .btn-outline {
-    @apply border-2 border-accent-teal text-accent-teal hover:bg-accent-teal hover:text-white;
+    @apply border-2 border-accent-sage text-accent-sage hover:bg-accent-sage hover:text-white;
   }
   
   .card {
@@ -69,6 +70,6 @@ section {
   
   .section-title::after {
     content: "";
-    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-coral;
+    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-clay;
   }
 }

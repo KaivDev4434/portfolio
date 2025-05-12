@@ -10,15 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2A2D34', // Dark Navy
-          light: '#3A3D44',   // Slightly lighter navy for cards
-          dark: '#1A1D24',    // Darker navy for footer
+          DEFAULT: '#2D3748', // Deep slate/navy
+          light: '#3D4A5C',   // Lighter slate for cards
+          dark: '#1A202C',    // Darker slate for footer
         },
         accent: {
-          teal: '#5F9EA0',    // Soft Teal
-          coral: '#FF6B6B',   // Coral
+          sage: '#7D9D9C',    // Soft sage green
+          clay: '#C17C74',    // Muted terracotta/clay
         },
-        background: '#F5F5F5', // Light Gray
+        background: '#F7F4ED', // Soft cream/off-white
+        text: '#1E293B',       // Dark charcoal
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
