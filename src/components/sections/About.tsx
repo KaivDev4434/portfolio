@@ -38,33 +38,45 @@ const skillItemVariants = {
 };
 
 const skills = [
-  'Python', 'R', 'SQL', 'TensorFlow', 'PyTorch', 'Pandas',
-  'Scikit-learn', 'Tableau', 'AWS', 'Docker', 'Git', 'Machine Learning',
-  'Deep Learning', 'Data Visualization', 'Statistical Analysis', 'NLP',
-  'Computer Vision', 'Time Series Analysis', 'Big Data', 'Neural Networks'
+  // Programming
+  'Python', 'JavaScript', 'SQL', 'Java', 'C', 'C++', 'Shell Scripting', 'HTML', 'CSS',
+  
+  // Machine Learning
+  'TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'LangChain', 'LlamaIndex',
+  
+  // Data Visualization
+  'Tableau', 'Matplotlib', 'Seaborn', 'Plotly', 'Pandas',
+  
+  // Cloud & Tools
+  'AWS', 'Docker', 'Git', 'Jupyter', 'Linux', 'SLURM',
+  
+  // Additional Skills
+  'Machine Learning', 'Deep Learning', 'Data Analysis', 'Statistical Analysis',
+  'NLP', 'Computer Vision', 'Time Series Analysis', 'Big Data', 'Neural Networks',
+  'ETL', 'Data Quality', 'GPU Computing', 'InfiniBand', 'Containerization'
 ];
 
 const funFacts = [
   {
     icon: <FiAward className="w-8 h-8" />,
-    text: 'Research Experience',
-    description: 'Published research on ML applications in healthcare'
+    text: 'HPC Expertise',
+    description: 'Specialized in GPU computing and high-performance computing infrastructure'
   },
   {
     icon: <FiDatabase className="w-8 h-8" />,
-    text: 'Data Analysis',
-    description: 'Analyzed complex datasets for business insights'
+    text: 'Data Engineering',
+    description: 'Built enterprise-scale ETL pipelines and data quality systems'
   },
   {
     icon: <FiBookOpen className="w-8 h-8" />,
-    text: 'Academic Excellence',
-    description: 'Maintained high GPA in Data Science program'
+    text: 'Research & Development',
+    description: 'Contributing to cutting-edge ML and distributed computing projects'
   },
-  {
-    icon: <FiCode className="w-8 h-8" />,
-    text: 'Open Source',
-    description: 'Active contributor to ML and data science projects'
-  }
+  // {
+  //   icon: <FiCode className="w-8 h-8" />,
+  //   text: 'Open Source',
+  //   description: 'Active contributor to ML frameworks and distributed systems'
+  // }
 ];
 
 const About = () => {
@@ -98,10 +110,10 @@ const About = () => {
                   <span className="gradient-text">Who I Am</span>
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  I am a Data Science graduate student at New Jersey Institute of Technology (NJIT) with a strong foundation in machine learning, data analysis, and software development. My academic journey has been complemented by hands-on experience in research and practical applications of data science.
+                  I am a Data Science graduate student at New Jersey Institute of Technology (NJIT) with a strong focus on high-performance computing, distributed systems, and machine learning. My experience spans from developing enterprise-scale ETL pipelines to managing HPC infrastructure and GPU computing environments.
                 </p>
                 <p className="text-gray-600 leading-relaxed text-lg mt-4">
-                  My research interests lie in the intersection of machine learning and healthcare, where I've worked on projects involving predictive modeling and data analysis. I'm passionate about using data-driven approaches to solve real-world problems and continuously expanding my knowledge in the field.
+                  Currently working as an HPC User Support Specialist, I help researchers optimize their computational workflows and manage advanced GPU clusters. My technical expertise includes distributed machine learning, data engineering, and system administration, with a particular interest in building scalable AI solutions and high-performance computing infrastructure.
                 </p>
               </motion.div>
 

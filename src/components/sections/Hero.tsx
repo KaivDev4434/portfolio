@@ -110,7 +110,7 @@ const Hero = () => {
               {/* Profile Image Container with simple border */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-lg z-10">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.jpeg"
                   alt="Profile"
                   width={600}
                   height={600}

@@ -43,8 +43,8 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-      value: 'kaivalya.dixit@njit.edu',
-      link: 'mailto:kaivalya.dixit@njit.edu'
+      value: 'kaivalyawork@gmail.com',
+      link: 'mailto:kaivalyawork@gmail.com'
     },
     {
       icon: <FiGithub className="w-6 h-6" />,
@@ -56,7 +56,7 @@ const Contact = () => {
       icon: <FiLinkedin className="w-6 h-6" />,
       title: 'LinkedIn',
       value: 'Kaivalya Dixit',
-      link: 'https://linkedin.com/in/kaivalya-dixit'
+      link: 'https://www.linkedin.com/in/kaivalya-dixit-2a25851b9'
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,

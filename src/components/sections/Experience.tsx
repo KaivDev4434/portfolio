@@ -6,30 +6,28 @@ import { FiCalendar, FiMapPin } from 'react-icons/fi';
 
 const experiences = [
   {
-    company: 'New Jersey Institute of Technology',
-    role: 'Graduate Research Assistant',
-    period: '2023 - Present',
-    location: 'Newark, NJ',
-    description: [
-      'Conducting research in machine learning applications for healthcare',
-      'Developing predictive models using advanced ML techniques',
-      'Collaborating with faculty on data analysis projects',
-      'Working with large datasets and implementing data pipelines'
-    ],
-    tools: ['Python', 'TensorFlow', 'PyTorch', 'Pandas', 'Scikit-learn'],
-  },
-  {
-    company: 'Research Projects',
-    role: 'Data Science Researcher',
-    period: '2022 - Present',
+    company: 'High Performance Computing',
+    role: 'HPC User Support Specialist, Student Intern',
+    period: 'Mar 2025 - May 2025',
     location: 'Remote',
     description: [
-      'Implemented and analyzed machine learning models for various applications',
-      'Conducted statistical analysis and data visualization',
-      'Developed data processing pipelines and automation scripts',
-      'Published research findings and technical reports'
+      'Support 400+ researchers with GPU/CPU performance tuning, containerization, and environment troubleshooting',
+      'Developed an automated benchmark suite for node health using Slurm, Bash, and Python',
+      'Provisioned 6 NVIDIA Grace Hopper nodes with InfiniBand, managing hardware setup and driver configurations'
     ],
-    tools: ['Python', 'R', 'SQL', 'Tableau', 'AWS'],
+    tools: ['Slurm', 'Bash', 'Python', 'GPU', 'InfiniBand', 'Containerization'],
+  },
+  {
+    company: 'Dassault Systems',
+    role: 'Data Analyst Intern',
+    period: 'Jan 2023 - Jul 2023',
+    location: 'Remote',
+    description: [
+      'Engineered Java-based ETL pipeline for Conversion Admin Service, processing enterprise-scale customer lifecycle data',
+      'Designed interactive dashboard for license conversion tracking using internal visualization frameworks',
+      'Automated data quality checks streams using SQL window functions and constraint validation'
+    ],
+    tools: ['Java', 'ETL', 'SQL', 'Data Visualization', 'Data Quality'],
   },
 ];
 

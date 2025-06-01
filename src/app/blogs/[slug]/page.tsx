@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   return slugs.map(slug => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const blog = await getBlogBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const blog = await getBlogBySlug(slug);
   
   if (!blog) {
     return {
@@ -26,8 +27,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BlogPage({ params }: { params: { slug: string } }) {
-  const blog = await getBlogBySlug(params.slug);
+export default async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const blog = await getBlogBySlug(slug);
   
   if (!blog) {
     notFound();
@@ -41,7 +43,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
           className="inline-flex items-center text-accent-sage hover:text-accent-clay transition-colors mb-8"
         >
           <FiArrowLeft className="mr-2" />
-          Back to Blog
+          Back to Home
         </Link>
         
         {/* Hero section */}

@@ -9,38 +9,42 @@ const education = [
   {
     degree: 'Master of Science in Data Science',
     school: 'New Jersey Institute of Technology',
-    period: '2023 - Present',
+    period: '2024 - 2025',
     location: 'Newark, NJ',
-    thesis: 'Machine Learning Applications in Healthcare',
-    gpa: '3.8/4.0',
+    gpa: '3.95/4.0',
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
-    school: 'Previous University',
+    degree: 'Bachelor of Technology in Electrical and Electronics Engineering',
+    school: 'Mahindra Ecole Centrale',
     period: '2019 - 2023',
-    location: 'Location',
-    thesis: 'Data Structures and Algorithms',
+    location: 'Hyderabad, India',
     gpa: '3.7/4.0',
   },
 ];
 
 const certifications = [
   {
-    title: 'Machine Learning Specialization',
-    issuer: 'Coursera',
-    date: '2023',
+    title: 'AWS Certified Machine Learning Engineer - Associate',
+    issuer: 'Amazon Web Services',
+    date: '2025',
     certificateUrl: '/certificates/machine-learning-cert.pdf'
   },
   {
-    title: 'Deep Learning Specialization',
-    issuer: 'Coursera',
-    date: '2023',
+    title: 'NVIDIA DLI Rag Pipeline',
+    issuer: 'NVIDIA Deep Learning Institute',
+    date: '2025',
     certificateUrl: '/certificates/deep-learning-cert.pdf'
   },
   {
-    title: 'Data Science Professional Certificate',
-    issuer: 'IBM',
+    title: 'Kaggle Introduction to Machine Learning',
+    issuer: 'Kaggle',
     date: '2022',
+    certificateUrl: '/certificates/data-science-cert.pdf'
+  },
+  {
+    title: 'Bloomberg Market Concepts',
+    issuer: 'Bloomberg for Education',
+    date: '2025',
     certificateUrl: '/certificates/data-science-cert.pdf'
   },
 ];
@@ -94,10 +98,6 @@ const Education = () => {
                   </h4>
                   <h5 className="text-lg text-accent-sage mb-2">{edu.school}</h5>
                   <div className="space-y-2 text-gray-600">
-                    <p className="flex items-start gap-2">
-                      <span className="font-semibold min-w-[4rem]">Thesis:</span>
-                      <span>{edu.thesis}</span>
-                    </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold min-w-[4rem]">GPA:</span>
                       <span className="text-accent-clay font-semibold">{edu.gpa}</span>

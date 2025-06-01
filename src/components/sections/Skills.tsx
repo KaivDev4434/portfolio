@@ -8,18 +8,26 @@ const skills = [
     category: 'Programming',
     items: [
       { name: 'Python', level: 90 },
-      { name: 'R', level: 85 },
-      { name: 'SQL', level: 95 },
-      { name: 'JavaScript', level: 80 },
+      { name: 'JavaScript', level: 85 },
+      { name: 'SQL', level: 90 },
+      { name: 'Java', level: 50 },
+      { name: 'C', level: 60 },
+      { name: 'C++', level: 30 },
+      { name: 'Shell Scripting', level: 70 },
+      { name: 'HTML', level: 80 },
+      { name: 'CSS', level: 75 },
+
     ],
   },
   {
     category: 'Machine Learning',
     items: [
-      { name: 'TensorFlow', level: 85 },
-      { name: 'PyTorch', level: 80 },
+      { name: 'TensorFlow', level: 50 },
+      { name: 'PyTorch', level: 90 },
       { name: 'Scikit-learn', level: 90 },
       { name: 'Keras', level: 75 },
+      { name: 'LangChain', level: 80 },
+      { name: 'LlamaIndex', level: 80 },
     ],
   },
   {
@@ -29,6 +37,7 @@ const skills = [
       { name: 'Matplotlib', level: 85 },
       { name: 'Seaborn', level: 80 },
       { name: 'Plotly', level: 75 },
+      { name: 'Pandas', level: 80 },
     ],
   },
   {
@@ -38,6 +47,8 @@ const skills = [
       { name: 'Docker', level: 75 },
       { name: 'Git', level: 90 },
       { name: 'Jupyter', level: 95 },
+      { name: 'Linux', level: 90 },
+      { name: 'SLURM', level: 95 },
     ],
   },
 ];

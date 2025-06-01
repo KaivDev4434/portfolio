@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 
 // Define the blog posts directory
 const postsDirectory = path.join(process.cwd(), 'src/content/blog-posts');
@@ -24,9 +25,16 @@ export interface BlogPost {
  */
 export function getBlogSlugs(): string[] {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map(fileName => {
-    return fileName.replace(/\.md$/, '');
-  });
+  return fileNames
+    .filter(fileName => {
+      return fileName.endsWith('.md') && 
+             !fileName.startsWith('.') && 
+             !fileName.includes('README') &&
+             fileName !== 'README.md';
+    })
+    .map(fileName => {
+      return fileName.replace(/\.md$/, '');
+    });
 }
 
 /**
@@ -44,8 +52,9 @@ export async function getBlogBySlug(slug: string): Promise<BlogPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
     
-    // Process the markdown content to HTML
+    // Process the markdown content to HTML with GFM support for tables
     const processedContent = await remark()
+      .use(remarkGfm)
       .use(html)
       .process(content);
     const contentHtml = processedContent.toString();

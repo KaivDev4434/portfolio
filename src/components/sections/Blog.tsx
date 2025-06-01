@@ -22,23 +22,25 @@ const Blog = ({ blogPosts }: BlogProps) => {
   };
 
   return (
-    <section id="blog" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="py-20 bg-primary text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-light opacity-90"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-4 text-primary"
+          className="text-3xl font-bold text-center mb-4 relative"
         >
           Blog
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-coral animate-draw-line"></span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          className="text-center text-gray-300 mb-12 max-w-2xl mx-auto"
         >
           Insights and thoughts on data science, machine learning, and AI
         </motion.p>
@@ -50,7 +52,7 @@ const Blog = ({ blogPosts }: BlogProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => scroll('left')}
-              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-primary pointer-events-auto focus:outline-none"
+              className="w-12 h-12 rounded-full bg-primary-light shadow-lg flex items-center justify-center text-white hover:bg-accent-teal transition-colors pointer-events-auto focus:outline-none"
               aria-label="Scroll left"
             >
               <FiArrowLeft className="w-5 h-5" />
@@ -59,7 +61,7 @@ const Blog = ({ blogPosts }: BlogProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => scroll('right')}
-              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-primary pointer-events-auto focus:outline-none"
+              className="w-12 h-12 rounded-full bg-primary-light shadow-lg flex items-center justify-center text-white hover:bg-accent-teal transition-colors pointer-events-auto focus:outline-none"
               aria-label="Scroll right"
             >
               <FiArrowRight className="w-5 h-5" />
