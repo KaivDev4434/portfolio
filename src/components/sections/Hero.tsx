@@ -44,7 +44,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-5xl md:text-6xl font-bold text-white leading-tight"
               >
-                Hi, I'm{' '}
+                Hi, I&apos;m{' '}
                 <span className="text-accent-clay relative inline-block">
                   Kaivalya Dixit
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent-clay/50 rounded-full"></span>
@@ -67,7 +67,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0"
             >
-              A passionate Data Scientist and ML Engineer with expertise in Python, Machine Learning, and Data Analysis. Currently pursuing my Master's in Data Science at NJIT.
+              A passionate Data Scientist and ML Engineer with expertise in Python, Machine Learning, and Data Analysis. Currently pursuing my Master&apos;s in Data Science at NJIT.
             </motion.p>
             
             <motion.div 
