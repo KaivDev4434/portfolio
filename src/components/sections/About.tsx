@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase, FiBarChart2, FiAward, FiBookOpen } from 'react-icons/fi';
+import { FiDatabase, FiAward, FiBookOpen } from 'react-icons/fi';
 
 // Animation variants
 const sectionVariants = {

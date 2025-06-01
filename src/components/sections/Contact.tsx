@@ -211,7 +211,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Message Sent!</h3>
-                <p className="text-gray-600 mb-8">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <p className="text-gray-600 mb-8">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
                 <button 
                   onClick={() => window.location.reload()}
                   className="px-6 py-3 bg-accent-clay text-white rounded-lg hover:bg-accent-clay/90 transition-all duration-300"

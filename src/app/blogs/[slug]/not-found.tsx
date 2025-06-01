@@ -8,14 +8,14 @@ export default function NotFound() {
         <h1 className="text-6xl font-bold text-accent-clay mb-6">404</h1>
         <h2 className="text-2xl font-bold text-primary mb-4">Blog Post Not Found</h2>
         <p className="text-gray-600 mb-8">
-          The blog post you are looking for doesn't exist or has been removed.
+          The blog post you are looking for doesn&apos;t exist or has been removed.
         </p>
         <Link 
           href="/#blog" 
           className="inline-flex items-center justify-center px-6 py-3 bg-accent-sage text-white rounded-lg hover:bg-accent-sage/90 transition-colors"
         >
           <FiArrowLeft className="mr-2" />
-          Back to Blog
+          Back to Home
         </Link>
       </div>
     </div>

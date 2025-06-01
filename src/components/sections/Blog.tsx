@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import BlogCard from '../BlogCard';

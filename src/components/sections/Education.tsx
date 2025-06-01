@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiCalendar, FiMapPin, FiAward, FiBook, FiExternalLink } from 'react-icons/fi';
-import Link from 'next/link';
 
 const education = [
   {
