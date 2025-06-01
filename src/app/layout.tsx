@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ClientProviders from "@/components/layout/ClientProviders";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const roboto = Roboto({ 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Footer />
         </ClientProviders>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
