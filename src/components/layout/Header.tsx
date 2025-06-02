@@ -66,9 +66,9 @@ const Header = () => {
   ];
 
   const socialLinks = [
-    { icon: FiGithub, url: 'https://github.com/yourusername', name: 'GitHub' },
-    { icon: FiLinkedin, url: 'https://linkedin.com/in/yourusername', name: 'LinkedIn' },
-    { icon: FiMail, url: 'mailto:your.email@example.com', name: 'Email' }
+    { icon: FiGithub, url: 'https://github.com/KaivDev4434', name: 'GitHub' },
+    { icon: FiLinkedin, url: 'https://www.linkedin.com/in/kaivalya-dixit-2a25851b9/', name: 'LinkedIn' },
+    { icon: FiMail, url: 'mailto:kaivalyawork@gmail.com', name: 'Email' }
   ];
 
   if (!isMounted) {

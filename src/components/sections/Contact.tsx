@@ -62,7 +62,7 @@ const Contact = () => {
       icon: <FiMapPin className="w-6 h-6" />,
       title: 'Location',
       value: 'Newark, NJ',
-      link: '#'
+      link: 'https://www.google.com/maps/place/Newark,+NJ'
     }
   ];
 

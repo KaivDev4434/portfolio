@@ -17,7 +17,7 @@ const education = [
     school: 'Mahindra Ecole Centrale',
     period: '2019 - 2023',
     location: 'Hyderabad, India',
-    gpa: '3.7/4.0',
+    gpa: '3.6/4.0',
   },
 ];
 
