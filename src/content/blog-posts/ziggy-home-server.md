@@ -1,9 +1,9 @@
 ---
 title: "Meet Ziggy: How I Transformed My Old Gaming Laptop Into a Powerful Home Server"
 slug: ziggy-home-server
-excerpt: "Meet Ziggy: a repurposed Lenovo Legion Y530 turned home server running Docker, CasaOS, and local AI—11 days uptime and cost‑effective self‑hosting."
+excerpt: "Meet Ziggy: a repurposed Lenovo Legion Y530 turned home server running Docker, CasaOS, and local AI, 11 days uptime and cost‑effective self‑hosting."
 coverImage: /images/blogs/legion_server_G.png
-date: 2025-07-27
+date: '2025-07-27'
 tags:
   - server
   - ubuntu
@@ -21,7 +21,7 @@ tags:
 # Meet Ziggy: How I Transformed My Old Gaming Laptop Into a Powerful Home Server
 
 ![legion_server_G.png](/images/blogs/legion_server_G.png)
-What do you do with a gaming laptop that's no longer your daily driver? Most people would sell it, store it in a closet, or give it away. But I saw an opportunity to give my trusty Lenovo Legion Y530 a second life as a home server. Meet Ziggy — my custom-built home server that's been running for 11 days straight, managing everything from Docker containers to AI models.
+What do you do with a gaming laptop that's no longer your daily driver? Most people would sell it, store it in a closet, or give it away. But I saw an opportunity to give my trusty Lenovo Legion Y530 a second life as a home server. Meet Ziggy my custom-built home server that's been running for 11 days straight, managing everything from Docker containers to AI models.
 
 ## The Hardware Foundation
 
