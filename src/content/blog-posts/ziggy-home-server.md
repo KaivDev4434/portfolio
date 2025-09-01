@@ -3,7 +3,7 @@ title: "Meet Ziggy: How I Transformed My Old Gaming Laptop Into a Powerful Home 
 slug: ziggy-home-server
 excerpt: "Meet Ziggy: a repurposed Lenovo Legion Y530 turned home server running Docker, CasaOS, and local AI—11 days uptime and cost‑effective self‑hosting."
 coverImage: /images/blogs/legion_server_G.png
-date: 2025-07-27T18:48:00
+date: 2025-07-27
 tags:
   - server
   - ubuntu
