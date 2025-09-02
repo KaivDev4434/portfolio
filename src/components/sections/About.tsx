@@ -2,24 +2,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiDatabase, FiAward, FiBookOpen, FiCode, FiCpu, FiCloud, FiGitBranch, FiTerminal, FiLayers, FiTrendingUp, FiShield, FiMonitor, FiZap, FiGlobe, FiBox, FiActivity, FiBarChart, FiEye, FiSettings, FiServer, FiHardDrive, FiSearch, FiHexagon, FiCircle, FiSquare, FiTriangle, FiStar, FiTarget, FiGrid, FiCpu as FiProcessor, FiWifi, FiLock, FiUnlock, FiRefreshCw, FiDownload, FiUpload, FiPlay, FiPause, FiVolume2, FiMic, FiCamera, FiImage, FiFile, FiFolder, FiArchive, FiPackage, FiTool, FiScissors, FiEdit, FiTrash2, FiCopy, FiSave, FiPrinter, FiMail, FiPhone, FiMapPin, FiCalendar, FiClock, FiUser, FiUsers, FiHeart, FiThumbsUp, FiMessageCircle, FiShare2, FiExternalLink, FiLink, FiMinus, FiPlus, FiX, FiCheck, FiAlertCircle, FiInfo, FiHelpCircle, FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiArrowDown, FiArrowUp, FiArrowLeft, FiArrowRight, FiRotateCw, FiRotateCcw, FiMaximize, FiMinimize, FiMaximize2, FiMinimize2, FiZoomIn, FiZoomOut, FiMove, FiCornerUpLeft, FiCornerUpRight, FiCornerDownLeft, FiCornerDownRight, FiCornerLeftUp, FiCornerLeftDown, FiCornerRightUp, FiCornerRightDown, FiCornerUpLeft as FiCornerUpLeft2, FiCornerUpRight as FiCornerUpRight2, FiCornerDownLeft as FiCornerDownLeft2, FiCornerDownRight as FiCornerDownRight2, FiCornerLeftUp as FiCornerLeftUp2, FiCornerLeftDown as FiCornerLeftDown2, FiCornerRightUp as FiCornerRightUp2, FiCornerRightDown as FiCornerRightDown2 } from 'react-icons/fi';
+import { FiDatabase, FiAward, FiBookOpen, FiTerminal, FiLayers, FiTrendingUp, FiActivity, FiSettings, FiServer, FiSearch, FiRefreshCw, FiUpload, FiArchive, FiPackage, FiTool, FiMessageCircle, FiLink } from 'react-icons/fi';
 import { 
-  SiPython, SiJavascript, SiTypescript, SiC, SiCplusplus, SiHtml5, SiCss3, SiLatex,
-  SiPytorch, SiTensorflow, SiScikitlearn, SiKeras, SiOpencv, SiNumpy, SiPandas,
-  SiAmazons3 as SiAws, SiDocker, SiGit, SiGithub, SiLinux, SiUbuntu, SiNvidia,
-  SiReact, SiNextdotjs, SiNodedotjs, SiFlask, SiSpringboot, SiStreamlit,
-  SiPostgresql, SiMysql, SiMongodb, SiRedis, SiElasticsearch,
-  SiApachespark, SiApachehadoop, SiApachehive, SiDatabricks,
-  SiTableau, SiPlotly, SiJupyter, SiAnaconda, SiGooglecolab,
-  SiTailwindcss, SiBootstrap, SiOpenai, SiKaggle
+  SiPython, SiJavascript, SiTypescript, SiCplusplus, SiHtml5, SiLatex,
+  SiPytorch, SiTensorflow, SiScikitlearn, SiKeras, SiNumpy, SiPandas, SiNvidia,
+  SiAmazons3 as SiAws, SiDocker, SiGithub, SiReact, SiNextdotjs, SiNodedotjs, 
+  SiFlask, SiSpringboot, SiStreamlit, SiPostgresql, SiMysql, SiMongodb, SiRedis,
+  SiApachespark, SiApachehadoop, SiApachehive, SiDatabricks, SiTableau, SiPlotly,
+  SiTailwindcss, SiBootstrap, SiOpenai
 } from 'react-icons/si';
+import { DiJava } from 'react-icons/di';
 import { 
-  DiPython, DiJavascript1, DiJava, DiReact, DiNodejs, DiMongodb, DiMysql, DiPostgresql, DiGit
-} from 'react-icons/di';
-import { 
-  TbBrandPython, TbBrandJavascript, TbBrandReact, TbBrandDocker, TbBrandGit,
-  TbDatabase, TbChartBar, TbCpu, TbCloud, TbBrain, TbRobot, TbEye, TbNetwork,
-  TbMath, TbChartLine, TbBrandAws, TbBrandGithub, TbApi, TbChartDots3
+  TbDatabase, TbChartBar, TbCpu, TbBrain, TbRobot, TbEye, TbNetwork,
+  TbMath, TbChartLine, TbBrandDocker, TbApi, TbChartDots3
 } from 'react-icons/tb';
 
 // Animation variants
