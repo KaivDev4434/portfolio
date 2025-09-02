@@ -2,7 +2,25 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiDatabase, FiAward, FiBookOpen } from 'react-icons/fi';
+import { FiDatabase, FiAward, FiBookOpen, FiCode, FiCpu, FiCloud, FiGitBranch, FiTerminal, FiLayers, FiTrendingUp, FiShield, FiMonitor, FiZap, FiGlobe, FiBox, FiActivity, FiBarChart, FiEye, FiSettings, FiServer, FiHardDrive, FiSearch, FiHexagon, FiCircle, FiSquare, FiTriangle, FiStar, FiTarget, FiGrid, FiCpu as FiProcessor, FiWifi, FiLock, FiUnlock, FiRefreshCw, FiDownload, FiUpload, FiPlay, FiPause, FiVolume2, FiMic, FiCamera, FiImage, FiFile, FiFolder, FiArchive, FiPackage, FiTool, FiScissors, FiEdit, FiTrash2, FiCopy, FiSave, FiPrinter, FiMail, FiPhone, FiMapPin, FiCalendar, FiClock, FiUser, FiUsers, FiHeart, FiThumbsUp, FiMessageCircle, FiShare2, FiExternalLink, FiLink, FiMinus, FiPlus, FiX, FiCheck, FiAlertCircle, FiInfo, FiHelpCircle, FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiArrowDown, FiArrowUp, FiArrowLeft, FiArrowRight, FiRotateCw, FiRotateCcw, FiMaximize, FiMinimize, FiMaximize2, FiMinimize2, FiZoomIn, FiZoomOut, FiMove, FiCornerUpLeft, FiCornerUpRight, FiCornerDownLeft, FiCornerDownRight, FiCornerLeftUp, FiCornerLeftDown, FiCornerRightUp, FiCornerRightDown, FiCornerUpLeft as FiCornerUpLeft2, FiCornerUpRight as FiCornerUpRight2, FiCornerDownLeft as FiCornerDownLeft2, FiCornerDownRight as FiCornerDownRight2, FiCornerLeftUp as FiCornerLeftUp2, FiCornerLeftDown as FiCornerLeftDown2, FiCornerRightUp as FiCornerRightUp2, FiCornerRightDown as FiCornerRightDown2 } from 'react-icons/fi';
+import { 
+  SiPython, SiJavascript, SiTypescript, SiC, SiCplusplus, SiHtml5, SiCss3, SiLatex,
+  SiPytorch, SiTensorflow, SiScikitlearn, SiKeras, SiOpencv, SiNumpy, SiPandas,
+  SiAmazons3 as SiAws, SiDocker, SiGit, SiGithub, SiLinux, SiUbuntu, SiNvidia,
+  SiReact, SiNextdotjs, SiNodedotjs, SiFlask, SiSpringboot, SiStreamlit,
+  SiPostgresql, SiMysql, SiMongodb, SiRedis, SiElasticsearch,
+  SiApachespark, SiApachehadoop, SiApachehive, SiDatabricks,
+  SiTableau, SiPlotly, SiJupyter, SiAnaconda, SiGooglecolab,
+  SiTailwindcss, SiBootstrap, SiOpenai, SiKaggle
+} from 'react-icons/si';
+import { 
+  DiPython, DiJavascript1, DiJava, DiReact, DiNodejs, DiMongodb, DiMysql, DiPostgresql, DiGit
+} from 'react-icons/di';
+import { 
+  TbBrandPython, TbBrandJavascript, TbBrandReact, TbBrandDocker, TbBrandGit,
+  TbDatabase, TbChartBar, TbCpu, TbCloud, TbBrain, TbRobot, TbEye, TbNetwork,
+  TbMath, TbChartLine, TbBrandAws, TbBrandGithub, TbApi, TbChartDots3
+} from 'react-icons/tb';
 
 // Animation variants
 const sectionVariants = {
@@ -26,34 +44,133 @@ const itemVariants = {
 };
 
 const skillItemVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { 
+    opacity: 0, 
+    scale: 0.8,
+    y: 20,
+    rotateY: 90
+  },
   visible: (custom: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { 
-      duration: 0.3,
-      delay: custom * 0.03
+    y: 0,
+    rotateY: 0,
+    transition: {
+      type: "spring",
+      damping: 25,
+      stiffness: 400,
+      delay: custom * 0.05,
+      duration: 0.6
     }
-  })
+  }),
+  hover: {
+    scale: 1.1,
+    y: -5,
+    rotateY: 10,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 300,
+      duration: 0.3
+    }
+  },
+  tap: {
+    scale: 0.95,
+    transition: {
+      duration: 0.1
+    }
+  }
 };
 
 const skills = [
-  // Programming
-  'Python', 'JavaScript', 'SQL', 'Java', 'C', 'C++', 'Shell Scripting', 'HTML', 'CSS',
+  // Programming Languages
+  { name: 'Python', icon: SiPython, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'Java', icon: DiJava, color: 'text-red-600', bgColor: 'bg-red-50' },
+  { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-500', bgColor: 'bg-yellow-50' },
+  { name: 'C/C++', icon: SiCplusplus, color: 'text-blue-700', bgColor: 'bg-blue-50' },
+  { name: 'HTML/CSS', icon: SiHtml5, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'Shell Scripting', icon: FiTerminal, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'LaTeX', icon: SiLatex, color: 'text-gray-600', bgColor: 'bg-gray-50' },
+  { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600', bgColor: 'bg-blue-50' },
   
-  // Machine Learning
-  'TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'LangChain', 'LlamaIndex',
+  // Machine Learning & AI
+  { name: 'PyTorch', icon: SiPytorch, color: 'text-red-500', bgColor: 'bg-red-50' },
+  { name: 'TensorFlow', icon: SiTensorflow, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'Scikit-learn', icon: SiScikitlearn, color: 'text-orange-600', bgColor: 'bg-orange-50' },
+  { name: 'Keras', icon: SiKeras, color: 'text-red-600', bgColor: 'bg-red-50' },
+  { name: 'XGBoost', icon: TbChartLine, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'OpenMP', icon: TbCpu, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'MPI', icon: TbNetwork, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'CUDA', icon: SiNvidia, color: 'text-green-500', bgColor: 'bg-green-50' },
+  { name: 'LangChain', icon: FiLink, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'LlamaIndex', icon: FiSearch, color: 'text-purple-500', bgColor: 'bg-purple-50' },
+  { name: 'OpenAI Gym', icon: SiOpenai, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+  { name: 'NLP', icon: FiMessageCircle, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'Deep Learning', icon: TbBrain, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+  { name: 'Neural Networks', icon: TbNetwork, color: 'text-pink-600', bgColor: 'bg-pink-50' },
+  { name: 'Transformers', icon: TbRobot, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'CNNs', icon: TbEye, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'RNNs (LSTM/GRU)', icon: FiActivity, color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
+  { name: 'Transfer Learning', icon: FiUpload, color: 'text-emerald-600', bgColor: 'bg-emerald-50' },
+  { name: 'Ensembling', icon: FiLayers, color: 'text-orange-600', bgColor: 'bg-orange-50' },
+  { name: 'Multimodal Learning', icon: TbEye, color: 'text-violet-600', bgColor: 'bg-violet-50' },
+  { name: 'AutoML', icon: TbRobot, color: 'text-teal-600', bgColor: 'bg-teal-50' },
+  { name: 'Time Series Analysis', icon: TbChartLine, color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
+  { name: 'Reinforcement Learning', icon: TbBrain, color: 'text-rose-600', bgColor: 'bg-rose-50' },
+  
+  // Data Engineering & Analytics
+  { name: 'SQL', icon: TbDatabase, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'PySpark', icon: SiApachespark, color: 'text-red-500', bgColor: 'bg-red-50' },
+  { name: 'Hadoop', icon: SiApachehadoop, color: 'text-yellow-600', bgColor: 'bg-yellow-50' },
+  { name: 'Pandas', icon: SiPandas, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'NumPy', icon: SiNumpy, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'MapReduce', icon: FiRefreshCw, color: 'text-orange-600', bgColor: 'bg-orange-50' },
+  { name: 'Hive', icon: SiApachehive, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'ETL/ELT Pipelines', icon: FiSettings, color: 'text-slate-600', bgColor: 'bg-slate-50' },
+  { name: 'Data Warehousing', icon: FiArchive, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+  { name: 'Data Lake', icon: TbDatabase, color: 'text-blue-700', bgColor: 'bg-blue-50' },
+  { name: 'Feature Engineering', icon: FiTool, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'Statistical Analysis', icon: TbMath, color: 'text-emerald-600', bgColor: 'bg-emerald-50' },
+  { name: 'Big Data', icon: TbDatabase, color: 'text-gray-600', bgColor: 'bg-gray-50' },
   
   // Data Visualization
-  'Tableau', 'Matplotlib', 'Seaborn', 'Plotly', 'Pandas',
+  { name: 'Tableau', icon: SiTableau, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'Matplotlib', icon: TbChartBar, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'Seaborn', icon: TbChartLine, color: 'text-red-500', bgColor: 'bg-red-50' },
+  { name: 'Plotly', icon: SiPlotly, color: 'text-purple-500', bgColor: 'bg-purple-50' },
   
-  // Cloud & Tools
-  'AWS', 'Docker', 'Git', 'Jupyter', 'Linux', 'SLURM',
+  // Cloud & DevOps
+  { name: 'AWS', icon: SiAws, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'Docker', icon: SiDocker, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'Apptainer', icon: FiPackage, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'Git/GitHub', icon: SiGithub, color: 'text-gray-700', bgColor: 'bg-gray-50' },
+  { name: 'Databricks', icon: SiDatabricks, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'MLflow', icon: FiTrendingUp, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'Weights & Biases', icon: FiTrendingUp, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'CI/CD', icon: FiRefreshCw, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'Containerization', icon: TbBrandDocker, color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
   
-  // Additional Skills
-  'Machine Learning', 'Deep Learning', 'Data Analysis', 'Statistical Analysis',
-  'NLP', 'Computer Vision', 'Time Series Analysis', 'Big Data', 'Neural Networks',
-  'ETL', 'Data Quality', 'GPU Computing', 'InfiniBand', 'Containerization'
+  // Frameworks & Tools
+  { name: 'React', icon: SiReact, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-gray-600', bgColor: 'bg-gray-50' },
+  { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'Flask', icon: SiFlask, color: 'text-gray-500', bgColor: 'bg-gray-50' },
+  { name: 'Streamlit', icon: SiStreamlit, color: 'text-red-500', bgColor: 'bg-red-50' },
+  { name: 'Spring Boot', icon: SiSpringboot, color: 'text-green-500', bgColor: 'bg-green-50' },
+  { name: 'REST APIs', icon: TbApi, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-500', bgColor: 'bg-cyan-50' },
+  { name: 'Bootstrap', icon: SiBootstrap, color: 'text-purple-500', bgColor: 'bg-purple-50' },
+  { name: 'SLURM', icon: FiServer, color: 'text-gray-600', bgColor: 'bg-gray-50' },
+  
+  // Databases
+  { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-600', bgColor: 'bg-blue-50' },
+  { name: 'MySQL', icon: SiMysql, color: 'text-orange-500', bgColor: 'bg-orange-50' },
+  { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600', bgColor: 'bg-green-50' },
+  { name: 'Redis', icon: SiRedis, color: 'text-red-600', bgColor: 'bg-red-50' },
+  { name: 'Data Modeling', icon: FiTool, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'Database Design', icon: TbDatabase, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+  { name: 'Query Optimization', icon: TbChartDots3, color: 'text-emerald-600', bgColor: 'bg-emerald-50' }
 ];
 
 const funFacts = [
@@ -161,20 +278,100 @@ const About = () => {
                   <span className="gradient-text">Technical Skills</span>
                 </h3>
                 <div className="flex flex-wrap gap-3 md:gap-4">
-                  {skills.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      custom={index}
-                      variants={skillItemVariants}
-                      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-                      className="group"
-                    >
-                      <span className="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium hover:bg-accent-teal transition-all duration-300 cursor-default inline-block shadow-sm">
-                        {skill}
-                      </span>
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-coral to-accent-teal opacity-0 group-hover:opacity-20 rounded-full blur transition duration-300"></div>
-                    </motion.div>
-                  ))}
+                  {skills.map((skill, index) => {
+                    const IconComponent = skill.icon;
+                    return (
+                      <motion.div
+                        key={skill.name}
+                        custom={index}
+                        variants={skillItemVariants}
+                        whileHover="hover"
+                        whileTap="tap"
+                        className="group relative"
+                      >
+                        {/* Glow effect background */}
+                        <motion.div 
+                          className="absolute -inset-1 bg-gradient-to-r from-accent-coral to-accent-teal opacity-0 group-hover:opacity-30 rounded-full blur-sm transition-all duration-500"
+                          animate={{
+                            scale: [1, 1.1, 1],
+                            opacity: [0, 0.3, 0]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            repeatDelay: 3
+                          }}
+                        />
+                        
+                        {/* Main skill badge */}
+                        <motion.span 
+                          className={`relative px-4 py-2 ${skill.bgColor} ${skill.color} rounded-full text-sm font-medium cursor-default inline-flex items-center gap-2 border border-gray-200 group-hover:border-gray-300 group-hover:shadow-lg backdrop-blur-sm`}
+                          whileHover={{
+                            boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                            borderColor: "rgba(156, 163, 175, 0.5)"
+                          }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {/* Icon with rotation animation */}
+                          <motion.div
+                            animate={{
+                              rotate: [0, 10, -10, 0],
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              repeatDelay: 4
+                            }}
+                            whileHover={{
+                              rotate: 360,
+                              transition: { duration: 0.6 }
+                            }}
+                          >
+                            <IconComponent className="w-4 h-4" />
+                          </motion.div>
+                          
+                          {/* Text with subtle pulse */}
+                          <motion.span
+                            whileHover={{
+                              scale: 1.05,
+                              transition: { duration: 0.2 }
+                            }}
+                          >
+                            {skill.name}
+                          </motion.span>
+                        </motion.span>
+                        
+                        {/* Floating particles effect */}
+                        <motion.div
+                          className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                        >
+                          {[...Array(3)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              className={`absolute w-1 h-1 ${skill.color.replace('text-', 'bg-')} rounded-full`}
+                              initial={{ 
+                                x: 10 + i * 5, 
+                                y: 10, 
+                                opacity: 0 
+                              }}
+                              animate={{
+                                y: [-5, -15, -5],
+                                opacity: [0, 1, 0],
+                                x: [10 + i * 5, 15 + i * 5, 10 + i * 5]
+                              }}
+                              transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                delay: i * 0.2
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </motion.div>
             </motion.div>
