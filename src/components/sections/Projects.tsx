@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 
 const projects = [
   {
@@ -12,7 +12,6 @@ const projects = [
     image: '/projects/rl-vacuum.png',
     technologies: ['Python', 'Reinforcement Learning', 'Computer Vision', 'Robotics', 'AI'],
     github: 'https://github.com/RL-cleaning-rob-cont-action-space/rl_vaccuum_cleaner',
-    demo: 'https://github.com/RL-cleaning-rob-cont-action-space/rl_vaccuum_cleaner',
   },
   {
     title: 'Traffic Flow Forecasting (TFF)',
@@ -20,7 +19,6 @@ const projects = [
     image: '/projects/traffic-flow.png',
     technologies: ['Python', 'Deep Learning', 'GNN', 'LSTM', 'ARIMA', 'Transfer Learning'],
     github: 'https://github.com/Traffic-flow-forcasting/TFF',
-    demo: 'https://github.com/Traffic-flow-forcasting/TFF',
   },
   {
     title: 'Custom Distributed ML Framework',
@@ -28,7 +26,6 @@ const projects = [
     image: '/projects/distributed-ml.jpg',
     technologies: ['Python', 'Distributed Systems', 'Machine Learning', 'Parallel Computing', 'Optimization'],
     github: 'https://github.com/KaivDev4434/Custom-Distributed-Machine-Learning-Framework',
-    demo: 'https://github.com/KaivDev4434/Custom-Distributed-Machine-Learning-Framework',
   },
   // {
   //   title: 'Neovim Configuration',
@@ -73,13 +70,16 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer block"
             >
               <div className="relative w-full h-48 overflow-hidden">
                 <Image
@@ -91,13 +91,16 @@ const Projects = () => {
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <FiGithub className="w-6 h-6 text-white" />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-primary group-hover:text-accent-coral transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
@@ -107,28 +110,8 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-accent-teal hover:text-accent-coral transition-colors group"
-                  >
-                    <FiGithub className="transform group-hover:rotate-12 transition-transform" />
-                    <span>Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-accent-teal hover:text-accent-coral transition-colors group"
-                  >
-                    <FiExternalLink className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    <span>Demo</span>
-                  </a>
-                </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
