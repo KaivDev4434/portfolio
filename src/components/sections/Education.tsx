@@ -22,38 +22,37 @@ const education = [
 ];
 
 const certifications = [
-  {
-    title: 'AWS Certified Machine Learning Engineer - Associate',
-    issuer: 'Amazon Web Services',
-    date: '2025',
-    certificateUrl: '/certificates/machine-learning-cert.pdf'
-  },
-  {
-    title: 'NVIDIA DLI Rag Pipeline',
-    issuer: 'NVIDIA Deep Learning Institute',
-    date: '2025',
-    certificateUrl: '/certificates/deep-learning-cert.pdf'
-  },
+  // {
+  //   title: 'AWS Certified Machine Learning Engineer - Associate',
+  //   issuer: 'Amazon Web Services',
+  //   date: '2025',
+  //   certificateUrl: '/certificates/machine-learning-cert.pdf'
+  // },
+  // {
+  //   title: 'NVIDIA DLI Rag Pipeline',
+  //   issuer: 'NVIDIA Deep Learning Institute',
+  //   date: '2025',
+  //   certificateUrl: '/certificates/deep-learning-cert.pdf'
+  // },
   {
     title: 'Kaggle Introduction to Machine Learning',
     issuer: 'Kaggle',
     date: '2022',
-    certificateUrl: '/certificates/data-science-cert.pdf'
+    certificateUrl: '/certificates/kaggle-ml.pdf'
   },
-  {
-    title: 'Bloomberg Market Concepts',
-    issuer: 'Bloomberg for Education',
-    date: '2025',
-    certificateUrl: '/certificates/data-science-cert.pdf'
-  },
+  // {
+  //   title: 'Bloomberg Market Concepts',
+  //   issuer: 'Bloomberg for Education',
+  //   date: '2025',
+  //   certificateUrl: '/certificates/data-science-cert.pdf'
+  // },
 ];
 
 const Education = () => {
-  // This function handles certificate clicks with a placeholder alert since we don't have real PDFs yet
+  // This function handles certificate clicks by opening the PDF in a new tab
   const handleCertificateClick = (cert: typeof certifications[0]) => {
-    // In a real implementation, this would open the PDF
-    // For now, just show an alert
-    alert(`Opening certificate: ${cert.title}\nThis is a placeholder for the PDF file that would open at ${cert.certificateUrl}`);
+    // Open the PDF in a new tab
+    window.open(cert.certificateUrl, '_blank');
   };
 
   return (

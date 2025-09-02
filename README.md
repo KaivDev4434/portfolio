@@ -2,7 +2,7 @@
 
 A professional, elegant portfolio website built with Next.js and Tailwind CSS. Showcases skills, experience, projects, and blog content with a clean, contemporary design.
 
-![Portfolio Preview](public/preview.png)
+<!-- Portfolio preview image removed - add your own screenshot here if needed -->
 
 ## Features
 
@@ -149,7 +149,7 @@ Your blog content here...
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Acknowledgments
 

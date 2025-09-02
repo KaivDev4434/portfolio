@@ -77,7 +77,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4"
             >
               <motion.a
-                href="/resume.pdf"
+                href="/kaivalyadixitresume.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
