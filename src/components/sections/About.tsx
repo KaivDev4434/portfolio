@@ -126,7 +126,6 @@ const skills = [
   { name: 'NumPy', icon: SiNumpy, color: 'text-blue-600', bgColor: 'bg-blue-50' },
   { name: 'MapReduce', icon: FiRefreshCw, color: 'text-orange-600', bgColor: 'bg-orange-50' },
   { name: 'Hive', icon: SiApachehive, color: 'text-orange-500', bgColor: 'bg-orange-50' },
-  { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600', bgColor: 'bg-green-50' },
   { name: 'ETL/ELT Pipelines', icon: FiSettings, color: 'text-slate-600', bgColor: 'bg-slate-50' },
   { name: 'Data Warehousing', icon: FiArchive, color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
   { name: 'Data Lake', icon: TbDatabase, color: 'text-blue-700', bgColor: 'bg-blue-50' },
