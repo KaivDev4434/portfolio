@@ -99,7 +99,7 @@ const Projects = () => {
           className="text-3xl font-bold text-center mb-12 relative text-primary"
         >
           Featured Projects
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-coral"></span>
+          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-accent-coral animate-draw-line"></span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

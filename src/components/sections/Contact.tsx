@@ -121,7 +121,7 @@ const Contact = () => {
           className="text-4xl font-bold text-center mb-16 relative text-primary"
         >
           Get In Touch
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent-coral animate-draw-line"></span>
+          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-accent-coral animate-draw-line"></span>
         </motion.h2>
       </div>
     </>

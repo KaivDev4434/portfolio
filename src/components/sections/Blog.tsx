@@ -33,7 +33,7 @@ const Blog = ({ blogPosts }: BlogProps) => {
           className="text-3xl font-bold text-center mb-4 relative"
         >
           Blog
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-coral animate-draw-line"></span>
+          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-accent-coral animate-draw-line"></span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

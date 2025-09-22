@@ -35,7 +35,7 @@ const Header = () => {
       }
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'blog', 'contact'];
+      const sections = ['home', 'about', 'experience', 'projects', 'blog', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -59,8 +59,6 @@ const Header = () => {
     { name: 'About', path: '#about' },
     { name: 'Experience', path: '#experience' },
     { name: 'Projects', path: '#projects' },
-    { name: 'Skills', path: '#skills' },
-    { name: 'Education', path: '#education' },
     { name: 'Blog', path: '#blog' },
     { name: 'Contact', path: '#contact' },
   ];

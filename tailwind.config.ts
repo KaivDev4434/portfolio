@@ -17,6 +17,8 @@ const config: Config = {
         accent: {
           sage: '#7D9D9C',    // Soft sage green
           clay: '#C17C74',    // Muted terracotta/clay
+          coral: '#FF6B6B',   // Coral red for experience
+          teal: '#4ECDC4',    // Teal for certifications
         },
         background: '#F7F4ED', // Soft cream/off-white
         text: '#1E293B',       // Dark charcoal

@@ -36,8 +36,6 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     'About',
     'Experience',
     'Projects',
-    'Skills',
-    'Education',
     'Blog',
     'Contact',
   ];

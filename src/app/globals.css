@@ -424,6 +424,7 @@ section {
   
   .section-title::after {
     content: "";
-    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-clay;
+    @apply absolute bottom-[-12px] left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-accent-coral;
+    animation: draw-line 2s ease-out forwards;
   }
 }

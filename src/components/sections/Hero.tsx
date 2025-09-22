@@ -47,7 +47,7 @@ const Hero = () => {
                 Hi, I&apos;m{' '}
                 <span className="text-accent-clay relative inline-block">
                   Kaivalya Dixit
-                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent-clay/50 rounded-full"></span>
+                  <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-accent-clay/50 rounded-full"></span>
                 </span>
               </motion.h1>
               
