@@ -65,7 +65,7 @@ const Header = () => {
 
   const socialLinks = [
     { icon: FiGithub, url: 'https://github.com/KaivDev4434', name: 'GitHub' },
-    { icon: FiLinkedin, url: 'https://www.linkedin.com/in/kaivalya-dixit-2a25851b9/', name: 'LinkedIn' },
+    { icon: FiLinkedin, url: 'https://www.linkedin.com/in/kaivalya-kishor-dixit/', name: 'LinkedIn' },
     { icon: FiMail, url: 'mailto:kaivalyawork@gmail.com', name: 'Email' }
   ];
 
@@ -140,7 +140,7 @@ const Header = () => {
               </motion.div>
               
               <motion.a
-                href="/resume.pdf"
+                href="/KaivalyaDixitResume.pdf"
                 download
                 custom={navItems.length}
                 variants={navItemVariants}
@@ -236,7 +236,7 @@ const Header = () => {
                     ))}
                     
                     <a
-                      href="/resume.pdf"
+                      href="/KaivalyaDixitResume.pdf"
                       download
                       className="btn btn-primary w-full mt-8"
                       onClick={() => setIsMenuOpen(false)}

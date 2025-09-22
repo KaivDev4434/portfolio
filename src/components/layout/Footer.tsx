@@ -85,7 +85,7 @@ const Footer = () => {
                 <FiGithub className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/in/kaivalya-dixit-2a25851b9"
+                href="https://www.linkedin.com/in/kaivalya-kishor-dixit/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-accent-sage transition-all duration-300 transform hover:scale-110"

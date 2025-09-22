@@ -56,7 +56,7 @@ const Contact = () => {
       icon: <FiLinkedin className="w-6 h-6" />,
       title: 'LinkedIn',
       value: 'Kaivalya Dixit',
-      link: 'https://www.linkedin.com/in/kaivalya-dixit-2a25851b9'
+      link: 'https://www.linkedin.com/in/kaivalya-kishor-dixit/'
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
