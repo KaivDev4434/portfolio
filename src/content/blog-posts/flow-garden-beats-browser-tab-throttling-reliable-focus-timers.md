@@ -1,7 +1,7 @@
 ---
-title: How Flow Garden Beat Browser Tab Throttling to Deliver Reliable Focus Timers
+title: "How Flow Garden Beat Browser Tab Throttling to Deliver Reliable Focus Timers"
 slug: flow-garden-beats-browser-tab-throttling-reliable-focus-timers
-excerpt: Discover how Flow Garden uses Web Workers, persistent timers, and smart recovery logic to overcome browser tab throttling and keep Pomodoro timers accurate—even when the app is running in the background.
+excerpt: "Discover how Flow Garden uses Web Workers, persistent timers, and smart recovery logic to overcome browser tab throttling and keep Pomodoro timers accurate—even when the app is running in the background."
 coverImage: /images/blogs/web-worker.jpg
 date: '2025-09-01'
 tags:
