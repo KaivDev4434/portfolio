@@ -49,7 +49,7 @@ const timelineItems: TimelineItem[] = [
     type: 'experience' as const,
     company: 'High Performance Computing',
     role: 'HPC User Support Specialist, Student Intern',
-    period: 'Sept 2024 - May 2025',
+    period: 'Mar 2024 - May 2025',
     startDate: '2024-09',
     location: 'Newark, NJ',
     description: [
@@ -74,7 +74,7 @@ const timelineItems: TimelineItem[] = [
     type: 'experience' as const,
     company: 'Dassault Systems',
     role: 'Data Analyst Intern',
-    period: 'Jan 2023 - Jul 2023',
+    period: 'Jan 2023 - Dec 2023',
     startDate: '2023-01',
     location: 'Pune, India',
     description: [
