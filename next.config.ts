@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'standalone',
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'kaivalya.dev'],
     unoptimized: true,
   },
 };
